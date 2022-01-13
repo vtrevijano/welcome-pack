@@ -1,0 +1,110 @@
+Selectores avanzados
+Hemos visto hasta ahora formas de hacer selectores de CSS muy básicas, generalmente por clases o etiquetas, pero apenas hemos profundizado en la relación entre las etiquetas, por ejemplo: un elemento dentro de otro, elementos "hermanos", o elementos que sen el tercero de su contenedor... etc. Vamos a ver algunos de ellos:
+
+padre > hijo_directo
+
+footer > p {
+    /* Selecciona todos los hijos DIRECTOS que cumplan con el criterio */
+    /* En este caso, todos los p que se encuentren dentro de un p */
+}
+regla + nodo adyacente
+
+.hola + .adios {
+  /* Selecciona un elemento ADYACENTE, es decir: */
+  /* en este caso, el elemento con clase adios, JUSTO DESPUÉS */
+  /* de un elemento con la clase hola */
+}
+nodo ~ nodo-hermano-post
+
+.hola ~ .adios {
+  /* Selecciona TODOS los elementos que vengan después, es decir: */
+  /* en este caso, TODOS los elementos con clase adios después */
+  /* de elementos con la clase hola */
+}
+Para que entiendas la diferencia entre los dos selectores anteriores te ponemos un ejemplo:
+
+HTML
+
+<div class="hola">Hola</div>
+<div class="hola">Hola</div>
+<div class="hola">Hola</div>
+<div class="adios">Adios</div>
+<div class="adios">Adios</div>
+<div class="adios">Adios</div>
+CSS
+
+.hola + .adios {
+  color: red;
+}
+
+.hola ~ .adios {
+  text-decoration: underline;
+}
+padre hijo
+
+Cuando separamos dos selectores con un espacio hacemos referencia a que uno está dentro de otro, por ejemplo
+
+div .miclase {
+  /* Estos estilos aplicarán a los elementos con la clase miclase */
+  /* Que estén dentro de un div (no importa a qué nivel) */
+}
+Primer / último hijo o hijo número N
+
+Reglas concretas para seleccionar ciertos elementos dentro de una jerarquía de estos.
+
+li:last-child {
+    /* Hace referencia a los li que sean el último hijo de su padre */
+}
+
+tr:nth-child(odd) {
+    /* Hace referencuia a los tr de filas impares */
+    /* Hay más combinaciones para nth-child, revisar: */
+    /* https://developer.mozilla.org/es/docs/Web/CSS/:nth-child */
+}
+[attr=valor]
+
+Permite generar selectores de CSS basados en atributos HTML (por ejemplo href o src). Para la parte del valor existen operadores "regexp" para comparar los valores de los atributos: ^= (comience por) |= (comience hasta -) $= (termine por)
+
+Por ejemplo:
+
+a[href="https://google.com"] {
+  color: red;
+}
+EJEMPLOS: https://codepen.io/franlindebl/pen/JjYzepE
+
+Backgrounds: truco útil
+Si en algún momento necesitas rellenar el hueco con una imagen, pero su tamaño es incierto… puedes “apañarlo” con un background.
+
+Por ejemplo si necesitamos mostrar una imagen cuadrada, pero la imagen no lo es:
+
+div.imagen-cuadrada {
+   display: inline-block;
+   width: 300px;
+   height: 300px;
+   background-image: url("https://i.ibb.co/LJRRycx/imagen-rectangular.jpg");
+   background-position: center;
+   background-size: cover;
+}
+Esto haría que la imagen de la izquierda se pueda representar como a la derecha
+
+MEDIA QUERIES MÁS COMUNES:
+-xs = 576px
+-sm = 576 - 768px
+-md = 768 - 992
+xl > 1200px
+
+Calc
+La función CSS calc () le permite realizar cálculos al especificar valores de propiedades CSS, esto te será muy útil en ciertos casos en los que quieras por ejemplo que un contenedor ocupe todo el ancho del contenedor menos ciertos pixeles de margen:
+
+.mi-elemento {
+    /* propiedad: calc(expression) */
+    width: calc(100% - 80px);
+}
+La función calc () toma una única expresión como parámetro y utiliza el resultado como valor.
+
+calc() acepta los siguientes operadores:
+
+suma (+)
+resta (-)
+multiplicación (*) cuidado, al menos uno de los argumentos debe ser un número
+división (/) cuidado, el lado derecho debe ser un número
