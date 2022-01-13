@@ -108,3 +108,73 @@ suma (+)
 resta (-)
 multiplicación (*) cuidado, al menos uno de los argumentos debe ser un número
 división (/) cuidado, el lado derecho debe ser un número
+
+
+FONTAWESOME:
+<link rel="stylesheet" href="[https://use.fontawesome.com/releases/v5.8.2/css/all.css](https://use.fontawesome.com/releases/v5.8.2/css/all.css)">
+
+
+SCSS: herencia
+Otra de las ventajas de SCSS es la posibilidad de reutilizar elementos haciendo uso de herencia o extensión.
+
+// SCSS
+%message-shared {
+   border: 1px solid #ccc;
+   padding: 10px;
+   color: #333;
+}
+
+.message {
+   @extend %message-shared;
+} 
+
+.success {
+   @extend %message-shared;
+   border-color: green;
+}
+/* CSS */
+.message, .success {
+   border: 1px solid #ccc;
+   padding: 10px;
+   color: #333;
+}
+
+.success {
+   border-color: green;
+}
+
+
+SCSS: content
+Podemos pasar contenido dinámico mediante la directiva @content, lo cual nos puede ser super útil para declarar los estilos responsive (combinándolo con los @mixin ya vistos antes).
+
+// SCSS Variables
+$layout_bp_mobile: 360px;
+$layout_bp_tablet: 800px;
+$layout_bp_desktop: 1280px;
+
+// SCSS Mixins
+@mixin tablet {
+  @media only screen and (min-width: #{$layout_bp_tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: #{$layout_bp_desktop}) {
+    @content;
+  }
+}
+
+// SCSS Styles
+.class {
+  background-color: blue;
+
+  @include tablet {
+    background-color: red;
+  }
+
+  @include desktop {
+    background-color: green;
+  }
+}
+

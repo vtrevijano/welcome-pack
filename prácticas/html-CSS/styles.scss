@@ -1,0 +1,115 @@
+/* VARIABLES */
+$base-background-color: whitesmoke;
+$secondary-background-color: #333333;
+$cards-background-color: #1a1818;
+$primary-color: #5f5f62;
+$links-color: #1371cf;
+
+/* ESTILOS GENERALES */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+  }
+li, a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/* NAVIGATION-BAR */
+
+.navigation{
+
+    .nav-container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $secondary-background-color;
+        padding: 30px  0;
+    }
+    .fa-apple-alt, .fa-shopping-bag, .fa-bars, .fa-times {
+        width: 30px;
+        color: $base-background-color;
+        opacity: 0.7;
+    }
+
+    /* MENÚ DESPLEGABLE */
+
+    .respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        right: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+    }
+      
+    .respmenu .fa-bars, .respmenu .fa-times {
+        font-size: 20px;
+        pointer-events: none;
+    }
+      
+    .respmenu input[type="checkbox"] {
+        opacity: 0;
+    }
+      
+    .respmenu {
+        position: relative;
+        min-height: 20px;
+        display: inline-block;
+    }
+      
+    .respmenu nav {
+        display: none;
+    }
+      
+    .respmenu input:checked ~ nav {
+        display: block;
+    }
+      
+    .respmenu input:checked ~ .fa-bars {
+        display: none;
+    }
+      
+    .respmenu input:not(:checked) ~ .fa-times {
+        display: none;
+    }
+}
+
+/* HEADER */
+
+.header-container{
+    padding: 20px 0;
+    background-color: $base-background-color;
+    .header-container__text, .header-container__link{
+        width: 90%;
+        margin: 0 auto 10px;
+        line-height: 1.25;
+        text-align: center;
+        color: $primary-color;
+    }
+    .header-container__link{
+        display: block;
+        color: $links-color;
+    }
+}
+
+/* MOBILES SECTION */
+
+.mobilesSection-container__box{
+    width: 100%;
+    
+    .SE-title, .iPhone11-title, .iPhone11Pro-title{
+        text-align: center;
+        font-size: 2rem;
+        margin: 0 auto;
+        color: $base-background-color;
+    }
+}
+.SE, .iPhone11Pro{
+    background-color: $cards-background-color;
+    padding: 20px 0;
+}

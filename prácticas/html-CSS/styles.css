@@ -1,0 +1,119 @@
+@charset "UTF-8";
+/* VARIABLES */
+/* ESTILOS GENERALES */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li, a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+/* NAVIGATION-BAR */
+.navigation {
+  /* MENÚ DESPLEGABLE */
+}
+
+.navigation .nav-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #333333;
+  padding: 30px  0;
+}
+
+.navigation .fa-apple-alt, .navigation .fa-shopping-bag, .navigation .fa-bars, .navigation .fa-times {
+  width: 30px;
+  color: whitesmoke;
+  opacity: 0.7;
+}
+
+.navigation .respmenu input[type="checkbox"], .navigation .respmenu .fa-bars, .navigation .respmenu .fa-times {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.navigation .respmenu .fa-bars, .navigation .respmenu .fa-times {
+  font-size: 20px;
+  pointer-events: none;
+}
+
+.navigation .respmenu input[type="checkbox"] {
+  opacity: 0;
+}
+
+.navigation .respmenu {
+  position: relative;
+  min-height: 20px;
+  display: inline-block;
+}
+
+.navigation .respmenu nav {
+  display: none;
+}
+
+.navigation .respmenu input:checked ~ nav {
+  display: block;
+}
+
+.navigation .respmenu input:checked ~ .fa-bars {
+  display: none;
+}
+
+.navigation .respmenu input:not(:checked) ~ .fa-times {
+  display: none;
+}
+
+/* HEADER */
+.header-container {
+  padding: 20px 0;
+  background-color: whitesmoke;
+}
+
+.header-container .header-container__text, .header-container .header-container__link {
+  width: 90%;
+  margin: 0 auto 10px;
+  line-height: 1.25;
+  text-align: center;
+  color: #5f5f62;
+}
+
+.header-container .header-container__link {
+  display: block;
+  color: #1371cf;
+}
+
+/* MOBILES SECTION */
+.mobilesSection-container__box {
+  width: 100%;
+}
+
+.mobilesSection-container__box .SE-title, .mobilesSection-container__box .iPhone11-title, .mobilesSection-container__box .iPhone11Pro-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 auto;
+  color: whitesmoke;
+}
+
+.SE, .iPhone11Pro {
+  background-color: #1a1818;
+  padding: 20px 0;
+}
+/*# sourceMappingURL=styles.css.map */
