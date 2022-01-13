@@ -1,0 +1,6 @@
+Resumen de la práctica Víctor Trevijano HTML y CSS:
+
+- He conseguido hacer todo salvo la visualización del nav en la vista de tablet/desktop. El problema es que se queda el input en el HTML y eso hace que el ul no tenga el 100% de width. 
+- Por el resto, he aplicado scss, bem, he intentado aplicar una arquitectura de html buena, he hecho las 3 vistas que se pedían, es responsive y he aplicado mobile first. Además, no he usado bootstrap.
+
+el total de horas han sido las 9 horas de la jornada del 13/01/2022, tanto para leer la documentación como para hacer el html y css.

@@ -5,6 +5,15 @@ $cards-background-color: #1a1818;
 $primary-color: #5f5f62;
 $links-color: #1371cf;
 
+/* MIXINS */
+
+  @mixin for-tablet {
+    @media (min-width: 576px) { @content; }
+  }
+  @mixin for-big-desktop {
+    @media (min-width: 992px) { @content; }
+  }
+
 /* ESTILOS GENERALES */
 
 body {
@@ -25,6 +34,9 @@ li, a {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        @include for-tablet {    
+            justify-content: space-evenly;
+         } 
         align-items: center;
         background-color: $secondary-background-color;
         padding: 30px  0;
@@ -46,7 +58,18 @@ li, a {
         width: 20px;
         height: 20px;
     }
-      
+     .fa-bars, .fa-times{
+        @include for-tablet {    
+            display: none;
+         }
+    }
+    .nav-content{
+        display: none;
+        @include for-tablet {    
+            display: block;
+    
+         }
+    }
     .respmenu .fa-bars, .respmenu .fa-times {
         font-size: 20px;
         pointer-events: none;
@@ -57,9 +80,12 @@ li, a {
     }
       
     .respmenu {
-        position: relative;
         min-height: 20px;
         display: inline-block;
+        @include for-tablet {    
+            display: block;
+    
+         }
     }
       
     .respmenu nav {
@@ -73,9 +99,41 @@ li, a {
     .respmenu input:checked ~ .fa-bars {
         display: none;
     }
-      
     .respmenu input:not(:checked) ~ .fa-times {
         display: none;
+    }
+    .nav-mobile__icon{
+        display: inline-block;
+        @include for-tablet {    
+            display: none;
+         }
+    }
+
+    /* NAV ITEMS */
+    .nav-container__ul{
+        padding: 0;
+        width: 100%;
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        @include for-tablet {
+            text-decoration: none;
+            flex-direction: row;
+         }
+
+        .nav-ul__listItem{
+            margin-bottom: 10px;
+            text-decoration: underline;
+            font-size: 1rem;
+            @include for-tablet {    
+                text-decoration: none;
+             }
+            .nav-ul__listItem-link{
+                color:whitesmoke;
+                padding: 10px;
+            }
+        }
+        
     }
 }
 
@@ -101,6 +159,7 @@ li, a {
 
 .mobilesSection-container__box{
     width: 100%;
+    padding: 20px 0;
     
     .SE-title, .iPhone11-title, .iPhone11Pro-title{
         text-align: center;
@@ -108,8 +167,184 @@ li, a {
         margin: 0 auto;
         color: $base-background-color;
     }
+    .SE-subtitle, .iPhone11-subtitle, .iPhone11Pro-subtitle{
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 400;
+        opacity: 0.8;
+        margin: 20px auto;
+        color: $base-background-color;
+    }
+    .SE-conditions__text, .iPhone11-conditions__text, .iPhone11Pro-conditions__text{
+        color: $primary-color;
+        width: 90%;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 20px auto;
+    }
+    .iPhone11-title{
+        color: $cards-background-color;
+        padding: 20px 0 0;
+    }
+    .iPhone11-subtitle{
+        color: $cards-background-color;
+    }
+    .SE-buttons, .iPhone11-buttons,.iPhone11Pro-buttons{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .button__info, .button__buy{
+        background-color: transparent;
+        margin-right: 10px;
+    }
+    .button__info::after, .button__buy::after{
+        content: ' \003E';
+    }
+    .iPhoneSEImage, .iPhone11Image, .iPhone11ProImage{
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        margin: 20px auto 0;
+    }
 }
 .SE, .iPhone11Pro{
     background-color: $cards-background-color;
     padding: 20px 0;
 }
+
+/* OTHER INFO SECTION */
+
+.other-information-container{
+    display: flex;
+    flex-direction: column;
+    @include for-tablet {    
+        flex-direction: row;
+        flex-wrap: wrap;
+
+     }
+    padding: 20px 0;
+
+    .other-information-container__card{
+        width: 100%;
+        @include for-tablet {    
+            width: 50%;
+         }
+    }
+    .watch__title, .macbook__title, .tv__title, .reOpen__title, .newApps__title, .learn__title{
+        text-align: center;
+        font-size: 2rem;
+        margin: 0 auto;
+        color: $base-background-color;
+        padding: 15px 0 0;
+    }
+    
+    .watch__title, .reOpen__title{
+        color: $cards-background-color;
+    }
+    
+    .watch__title{
+        font-size: 2.4rem;
+    }
+    .watchModel{
+        display: block;
+        font-size: 1.1rem;
+        color: #d9525b;
+    }
+    .macbook, .learn{
+        background-color: $cards-background-color;
+    }
+    .tv{
+        background-color: #9191b3;
+    }
+    .newApps{
+        background-color: #4781b8;
+    }
+    .other-information-container__card__subtitle{
+        text-align: center;
+        font-size: 1rem;
+        margin: 0 auto;
+        color:$primary-color;
+        padding: 15px 0;
+    }
+    /* IMAGES */
+
+    .iWatchImage, .macbookImage, .appleTvImage, .reOpenImage, .newAppsImage, .learnImage{
+        display: block;
+        width: 100%;
+        max-width: 250px;
+        margin: 20px auto;
+    }
+
+    /* BUTTONS */
+    .watch-buttons, .macbook-buttons, .tv-buttons, .reOpen-buttons, .newApps-buttons, .learn-buttons{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    .button__info, .button__buy{
+        background-color: transparent;
+        margin-top: 10px;
+    }
+    .button__info::after, .button__buy::after{
+        content: ' \003E';
+    }
+    .newApps-button{
+        color: $base-background-color;
+    }
+}
+
+/* FOOTER */
+footer{
+    width: 100%;
+    @include for-big-desktop {    
+        max-width: 900px;
+        margin: 0 auto;
+     }
+     .footer-conditions{
+        border-bottom: 1px solid $primary-color;
+    }
+    .footer-conditions__text{
+        color: $primary-color;
+        font-size: 0.75rem;
+        line-height: 1.5;
+        text-align: left;
+        margin: 0 auto 5px;
+        padding: 0 12px;
+    }
+    .footer-nav{
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        @include for-tablet {    
+            flex-direction: row;
+            align-items: flex-start;
+         }
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 20px 10px;
+    
+        .footer-nav-column{
+            width: 20%;
+            .footer-nav-column-section__title{
+                font-size: .9rem;
+    
+            }
+            .footer-nav-column-section__list{
+                margin: 0;
+                padding: 0;
+                .footer-nav-column-section__list-item{
+                    font-size: .8rem;
+                }
+            }
+        }
+        
+    }
+}
+
+
+
+
