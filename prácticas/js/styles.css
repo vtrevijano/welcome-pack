@@ -1,1 +1,8 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+.visible {
+  display: block;
+}
+
+.non-visible {
+  display: none;
+}
+/*# sourceMappingURL=styles.css.map */
