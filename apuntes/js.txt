@@ -1,0 +1,7 @@
+JavaScript tiene tipos de datos dinámicos, lo que significa que la comprobación de tipo se realiza en tiempo de ejecución en lugar de tiempo de compilación. Con los lenguajes de tipo dinámico, se puede utilizar una variable del mismo nombre para contener diferentes tipos de datos.
+
+Trabajando con el contexto → call()
+La función .call() recibe los mismos argumentos que la función más uno, el valor que tendrá this que se pasa antes que los demás argumentos. Es decir, nuestra función miFantastic no recibe ningún argumento así que si llamamos a su método .call() y le pasamos lo que queremos que sea this es decir: fantasticFour, así conseguiremos que el método funcione igual que si lo hubiésemos llamado con fantasticFour.miName
+
+Trabajando con el contexto → apply()
+El método .apply() actúa de forma bastante similar a .call(), pero con una variación, solo recibe dos argumentos, el primero es el contexto de la función, el valor de this y el segundo será un array que contendrá los argumentos que se le pasarán a la función, veamos su uso en el ejemplo anterior:
