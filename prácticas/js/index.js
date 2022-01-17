@@ -13,16 +13,19 @@ const showHomeContent = () => {
     homeContent.classList.remove('non-visible')
     homeContent.classList.add('visible')
     listContent.classList.add('non-visible')
+
     if (homeContent.classList.contains('visible')) {
-        youAreAlreadyHere.classList.remove("non-visible")
+        youAreAlreadyHere.classList.toggle("non-visible")
     }
 }
 
 const showListItems = () => {
     listContent.classList.remove('non-visible')
+    listContent.classList.add('visible')
     homeContent.classList.add("non-visible")
+
     if (listContent.classList.contains('visible')) {
-        youAreAlreadyHere.classList.add("non-visible")
+        youAreAlreadyHere.classList.toggle("non-visible")
     }
 }
 
@@ -31,7 +34,7 @@ const redirectToHome = () => {
     homeContent.classList.add('visible')
     listContent.classList.add('non-visible')
     if (homeContent.classList.contains('visible')) {
-        youAreAlreadyHere.classList.remove("non-visible")
+        youAreAlreadyHere.classList.toggle("non-visible")
     }
 }
 
