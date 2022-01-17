@@ -1,33 +1,155 @@
-.visible{
-    display: block;
+$base-background-color: #dc3741;
+$secondary-background-color: #feca1b;
+$cards-background-color: #1a1818;
+$primary-color: whitesmoke;
+
+.visible {
+  display: block;
 }
-.non-visible{
-    display: none;
+.non-visible {
+  display: none;
 }
-.character__list {
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+li,
+a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+/* HEADER */
+nav {
+  .nav__list {
     display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    justify-content: space-around;
+    padding: 10px 0;
+    align-items: center;
+    margin: 0 auto;
+    background-color: $base-background-color;
+    .navUl__item {
+      max-width: 90px;
+      .application__logo {
+        width: 90%;
+        background-size: contain;
+        padding: 10px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0;
+        cursor: pointer;
+      }
+      .navigation__button {
+        background-color: transparent;
+        cursor: pointer;
+        color: $secondary-background-color;
+        font-size: 1.5rem;
+        font-weight: 700;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+  .currentPage__text {
+    font-size: 2.4rem;
+    color: $base-background-color;
+    text-align: center;
+  }
 }
-.pokeList {
-    width: 130px;
-    margin: 12px;
-    border: 3px solid #feca1b;
-    color: #feca1b;
+
+/* MAIN */
+
+/* HOME PAGE */
+
+.home__content {
+  padding: 0 10px;
+  max-width: 100%;
+  .home__title {
+    font-size: 1.5rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+  }
+  .home__description,
+  .home__bodyText {
+    font-size: 1rem;
+    line-height: 1.35;
+    word-spacing: 5;
+  }
+  .moreInfo {
+    &__button {
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 18px;
+      background-color: $secondary-background-color;
+      color: $primary-color;
+      padding: 13px;
+      border-radius: 8px;
+      border: 1px solid $primary-color;
+      cursor: pointer;
+    }
+    &__button:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+/* LIST PAGE */
+.character__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  .pokemon__list {
+    min-width: 280px;
+    max-width: 300px;
+    margin: 12px auto;
+    border: 3px solid $secondary-background-color;
+    color: $secondary-background-color;
     border-radius: 8px;
     list-style: none;
     background-color: #3761a8;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.9;
+    }
+    img {
+      max-width: 100%;
+    }
+    .pokemon__name {
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
 }
-img {
-    width: 90%;
-    background-size: contain;
-    padding: 10px;
-    margin: 0 auto;
-    text-align: center;
-  }
 
-  .footer__map {
-    height: 100%;
+/* FOOTER */
+
+.footer {
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    background-color: $base-background-color;
+    padding: 20px 0;
+    margin: 0 auto;
+    .list__item {
+      .rrss__icon {
+        font-size: 2rem;
+        color: $primary-color;
+      }
+    }
   }
+  &__copyright {
+    text-align: center;
+    margin: 0 auto;
+    background-color: $base-background-color;
+    color: $primary-color;
+    font-size: 1.7rem;
+    padding: 20px 0 30px;
+  }
+}
