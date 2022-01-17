@@ -6,12 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script defer src="index.js"></script>
+    <script defer src="info.js"></script>
+    <script defer src="list.js"></script>
+    <!-- <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap">
+  </script> -->
     <title>Document</title>
 </head>
 <body>
     <header>
         <nav>
             <ul class="nav__list">
+                <li class="navUl__item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="pokemon logo" class="application__logo">
+                </li>
                 <li class="navUl__item">
                     <button class="navigation__button home__button">
                         Home
@@ -22,6 +30,7 @@
                         List
                     </button>
                 </li>
+                
             </ul>
             <h1 class="currentPage__text non-visible">
                 ya estás aquí!
@@ -29,15 +38,30 @@
         </nav>
     </header>
     <main>
-        <div class="home__content ">
-            este es el contenido de la home
+        <div class="home__content">
+            <h1 class="home__title">
+               
+            </h1>
+            <p class="home__description">
+                A continuación, detallaré lo que puedes encontrar en esta web, tanto las increíbles funcionalidades, como la finalidad de la misma web. Estate atento!!
+            </p>
+            <p class="home__bodyText ">
+                La temática elegida para la web es POKEMON! Supongo que te preguntarás el porqué, si es la típica temática que se suele elegir en los primeros proyectos... pues esa es la esencia, retroceder a los inicios para recordar esos primeros pasos programando, el primer querySelector, la primera petición a una API... A continuación, os dejo algunas funcionalidades extra!
+            </p>
+            <div class="moreInfo">
+                <button class="moreInfo__button">
+                    Click para más info
+                </button>
+                
+            </div>
         </div>
         <div class="list__content non-visible">
-            este es el contenido de list
+            <ul class="character__list"></ul>
         </div>
     </main>
     <footer>
         <ul class="footer__list"></ul>
+        <div class="footer__map"></div>
     </footer>
 </body>
 </html>
