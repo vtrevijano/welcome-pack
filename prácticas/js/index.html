@@ -1,92 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="[https://use.fontawesome.com/releases/v5.8.2/css/all.css](https://use.fontawesome.com/releases/v5.8.2/css/all.css)">
-    <link rel="icon" href="https://s2.coinmarketcap.com/static/img/coins/200x200/8303.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="[https://use.fontawesome.com/releases/v5.8.2/css/all.css](https://use.fontawesome.com/releases/v5.8.2/css/all.css)"
+    />
+    <link
+      rel="icon"
+      href="https://s2.coinmarketcap.com/static/img/coins/200x200/8303.png"
+      type="image/x-icon"
+    />
     <script defer type="module" src="index.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap">
-  </script> -->
     <title>Pokemon App</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul class="nav__list">
-                <li class="navUl__item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="pokemon logo" class="application__logo">
-                </li>
-                <li class="navUl__item">
-                    <a href="#" class="navigation__button home__button">
-                        Home
-                    </a>
-                </li>
-                <li class="navUl__item">
-                    <a href="#" class="navigation__button list__button">
-                        List
-                    </a>
-                </li>
-            </ul>
-            <h1 class="currentPage__text non-visible">
-                Ya estás aquí!
-            </h1>
-        </nav>
+      <nav>
+        <ul class="nav__list">
+          <li class="navUl__item">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png"
+              alt="pokemon logo"
+              class="application__logo"
+            />
+          </li>
+          <li class="navUl__item">
+            <a href="#" class="navigation__button home__button"> Home </a>
+          </li>
+          <li class="navUl__item">
+            <a href="#" class="navigation__button list__button"> List </a>
+          </li>
+        </ul>
+        <h1 class="currentPage__text non-visible">Ya estás aquí!</h1>
+      </nav>
     </header>
     <main>
-        <div class="home__content">
-            <h1 class="home__title">
-               
-            </h1>
-            <p class="home__description">
-                A continuación, detallaré lo que puedes encontrar en esta web, tanto las increíbles funcionalidades, como la finalidad de la misma web. Estate atento!!
-            </p>
-            <p class="home__bodyText ">
-                La temática elegida para la web es POKEMON! Supongo que te preguntarás el porqué, si es la típica temática que se suele elegir en los primeros proyectos... pues esa es la esencia, retroceder a los inicios para recordar esos primeros pasos programando, el primer querySelector, la primera petición a una API... A continuación, os dejo algunas funcionalidades extra!
-            </p>
-            <div class="moreInfo">
-                <button class="moreInfo__button">
-                    Click para más info
-                </button>
-                
-            </div>
+      <div class="home__content">
+        <h1 class="home__title"></h1>
+        <p class="home__description">
+          A continuación, detallaré lo que puedes encontrar en esta web, tanto
+          las increíbles funcionalidades, como la finalidad de la misma web.
+          Estate atento!!
+        </p>
+        <p class="home__bodyText">
+          La temática elegida para la web es POKEMON! Supongo que te preguntarás
+          el porqué, si es la típica temática que se suele elegir en los
+          primeros proyectos... pues esa es la esencia, retroceder a los inicios
+          para recordar esos primeros pasos programando, el primer
+          querySelector, la primera petición a una API... A continuación, os
+          dejo algunas funcionalidades extra!
+        </p>
+        <div class="moreInfo">
+          <button class="moreInfo__button">Click para más info</button>
         </div>
-        <div class="list__content non-visible">
-            <ul class="character__list"></ul>
-        </div>
+      </div>
+      <div class="list__content non-visible">
+        <ul class="character__list"></ul>
+      </div>
     </main>
     <footer>
-        <ul class="footer__list">
-            <li class="list__item">
-                <a target="_blank" href="https://twitter.com/Pokemon_ES_ESP?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
-                    <i class="fab fa-twitter rrss__icon"></i>
-                </a>
-            </li>
-            <li class="list__item">
-                <a target="_blank" href="https://www.instagram.com/pokemon/">
-                    <i class="fab fa-instagram rrss__icon"></i>
-                </a>
-            </li>
-            <li class="list__item">
-                <a target="_blank" href="https://github.com/topics/pokemon">
-                    <i class="fab fa-github rrss__icon"></i>
-                </a>
-            </li>
-            <li class="list__item">
-                <a target="_blank" href="https://es-la.facebook.com/Pokemon/">
-                    <i class="fab fa-facebook rrss__icon"></i>
-                </a>
-            </li>
-        </ul>
-        <p class="footer__copyright">
-            Made by VtreV <i class="fab fa-angellist rrss__icon"></i>
-        </p>
-        <div class="footer__map"></div>
+      <ul class="footer__list">
+        <li class="list__item">
+          <a
+            target="_blank"
+            href="https://twitter.com/Pokemon_ES_ESP?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+          >
+            <i class="fab fa-twitter rrss__icon"></i>
+          </a>
+        </li>
+        <li class="list__item">
+          <a target="_blank" href="https://www.instagram.com/pokemon/">
+            <i class="fab fa-instagram rrss__icon"></i>
+          </a>
+        </li>
+        <li class="list__item">
+          <a target="_blank" href="https://github.com/topics/pokemon">
+            <i class="fab fa-github rrss__icon"></i>
+          </a>
+        </li>
+        <li class="list__item">
+          <a target="_blank" href="https://es-la.facebook.com/Pokemon/">
+            <i class="fab fa-facebook rrss__icon"></i>
+          </a>
+        </li>
+      </ul>
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2722.2902218410854!2d-123.85217068442721!3d46.975633979147865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54923a16c9e3ce53%3A0x98fe5b2cbbdb87b9!2sGame%20Freaks%20Video%20Games!5e0!3m2!1ses!2ses!4v1642491219284!5m2!1ses!2ses"
+        width="100%"
+        height="400"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+      <p class="footer__copyright">
+        Made by VtreV <i class="fab fa-angellist rrss__icon"></i>
+      </p>
+      <div class="footer__map"></div>
     </footer>
-</body>
+  </body>
 </html>

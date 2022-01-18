@@ -73,17 +73,3 @@ const showMoreInfo = () => {
     moreInfoBlock.innerHTML = '<h2 class="moreInfo__title">Si estás viendo esto es porque has elegido ver más contenido</h2><p class="moreInfo__text">Pero no quiero engañarte, ya te he contado todo lo interesante que tenía que ofrecer, así que te dejo con la canción de pokemon, que así igual aprendes algo nuevo.</p><p class="moreInfo__song">Llegaré a ser el mejor El mejor que habrá jamás Mi causa es ser entrenador Tras mi gran prueba real Viajaré a cualquier lugar Llegaré a cualquier rincón Y al fin podré desentrañar El poder que hay en Pokémon Es Pokémon, hazte con todos </p>'
 }
 moreInfoButton.addEventListener('click', showMoreInfo)
-
-
-//Mapa del footer
-
-/* const footerMap = document.querySelector('.footer__map')
-
-function initMap() {
-    footerMap = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 43.5293101, lng: -5.6773233},
-    zoom: 13
-  });
-}
-initMap()
-console.log(footerMap) */
