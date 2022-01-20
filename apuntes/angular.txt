@@ -1,0 +1,36 @@
+El método constructor permite la creación del componente y la asignación de los parámetros de entrada a los valores iniciales a los atributos del componente. El método ngOnInit maneja el comportamiento que el componente seguirá cuando aparezca por primera vez.
+
+Estos dos anteriores métodos se generan automáticamente, pero existen otros métodos que tienen que ver con el ciclo de vida de la clase. El ciclo de vida de un componente está compuesto por diferentes etapas que van desde su construcción, pasando por su uso, hasta su destrucción.
+
+Conviene destacar otras dos funciones importantes:
+
+- ngOnChanges este evento será lanzado por cada cambio en las propiedades del componente ~~~~ ComponentDidUpdate
+- ngOnDestroy este evento se ejecuta justo antes de destruir un componente, nos será útil para "hacer limpieza" y no dejarnos cables sueltos ~~~ ComponentDidUnmount
+
+NgModel, NgClass y NgStyle
+
+Las directivas corresponden a elementos en el HTML que permiten añadir, manipular o eliminar elementos del DOM. Estas directivas son fácilmente reconocibles debido a que están precedidas por un asterisco * seguido del nombre de la directiva. 
+
+
+¿Qué sucede si no queremos que aparezca el bloque dentro de nuestro DOM? Podemos usar la etiqueta <ng-template> durante el proceso de transpilación de Angular CLI. Por ejemplo:
+
+<ng-template [ngIf]="condition or variable">
+  <div>
+      <p>Contion or Variable is true and draw on DOM</p>
+  </div>
+</ng-template>
+
+ng-template es como el <> de React
+
+
+Tipos de directivas
+En Angular existen dos tipos de directivas:
+
+Directivas de componente: es aquella que se utiliza en un punto del HTML de manera "nativa" por lo tanto sería una directiva con un template.
+Directivas de atributo: con esta cambiamos la apariencia o comportamiento de un elemento.
+*Importante! solamente se puede aplicar una directiva por bloque
+
+NgModel realiza un enlace entre una propiedad del componente con un valor que se muestra en una propiedad de un formulario, como puede ser input, textarea, etc. Es decir, en el componente creas una variable y le asignas valor, y en el html ya tienes accesible esa variable. 
+
+*IMPORTANTE*
+Para usar el ngModel hay que importar FormsModule en el ngModule del archivo app.module.ts

@@ -1,0 +1,10 @@
+<p>Texto de prueba en el app.html</p>
+<!--Optional part let i = index" -->
+<ul *ngIf="avengers">
+    <li *ngFor="let avenger of avengers; let index = index">
+      Nombre del Vengador número {{index}} de nombre {{avenger}}
+    </li>
+  </ul>
+<input type="text" [ngModel]="name">
+
+<app-student-list-header></app-student-list-header>
