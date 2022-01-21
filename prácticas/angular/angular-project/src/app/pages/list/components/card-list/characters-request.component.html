@@ -1,0 +1,13 @@
+<div *ngIf="characterList">
+    <h3>Rick and Morty Character List!</h3>
+    <!-- <button (click)="nextPage()">Next</button>
+    <button (click)="previousPage()">Previous</button> -->
+    <div *ngFor="let character of (characterList | filterNames: filter)">
+      <h4>{{ character.name }}</h4>
+      <img [src]="character.image" [alt]="character.name">
+    </div>
+  </div>
+  <h2>This is the character list</h2>
+  
+  <h3>Change the filter by writing here ⬇️</h3>
+  <input type="text" [(ngModel)]="filter" />
