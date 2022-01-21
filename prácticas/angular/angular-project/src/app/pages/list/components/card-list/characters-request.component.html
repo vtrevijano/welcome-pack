@@ -1,13 +1,15 @@
-<div *ngIf="characterList">
-    <h3>Rick and Morty Character List!</h3>
-    <!-- <button (click)="nextPage()">Next</button>
+<div class="gallery" *ngIf="characterList">
+  <h3 class="gallery__title">Rick and Morty Character List!</h3>
+  <!-- <button (click)="nextPage()">Next</button>
     <button (click)="previousPage()">Previous</button> -->
-    <div *ngFor="let character of (characterList | filterNames: filter)">
-      <h4>{{ character.name }}</h4>
-      <img [src]="character.image" [alt]="character.name">
-    </div>
+  <h3 class="gallery__filterTitle">Para filtrar los personajes por nombre ⬇️</h3>
+  <input class="gallery__filterInput" type="text" [(ngModel)]="filter" />
+  <div>
+    <ul class="characterList">
+      <li [routerLink]="['/list-detail/' + character.id]" *ngFor="let character of characterList | filterNames: filter">
+        <h4 class="characterList__name">{{ character.name }}</h4>
+        <img class="characterList__image" [src]="character.image" [alt]="character.name" />
+      </li>
+    </ul>
   </div>
-  <h2>This is the character list</h2>
-  
-  <h3>Change the filter by writing here ⬇️</h3>
-  <input type="text" [(ngModel)]="filter" />
+</div>

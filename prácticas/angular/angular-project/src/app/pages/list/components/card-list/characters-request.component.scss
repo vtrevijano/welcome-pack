@@ -1,0 +1,56 @@
+$mainColor: #35b13c;
+$yellow: #b2c455;
+$border: #e3584d;
+$buttonbck: #152573;
+
+.gallery {
+  &__title {
+    text-align: center;
+    font-size: 1.7rem;
+    margin: 50px auto;
+  }
+  &__filterTitle {
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 50px auto;
+    color: $yellow;
+  }
+  &__filterInput {
+    display: block;
+    font-size: 1.4rem;
+    margin: 50px auto;
+    color: $mainColor;
+    font-weight: 900;
+    text-transform: capitalize;
+  }
+}
+
+.characterList {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  li {
+    list-style-type: none;
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid $mainColor;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin: 20px auto;
+    cursor: pointer;
+    background-image: url("https://media.giphy.com/media/l0K4lUxBzIOeJd1EA/giphy.gif");
+  }
+  &__name {
+    display: block;
+    font-size: 1.5rem;
+  }
+  &__image {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid $mainColor;
+    margin: 0 auto;
+  }
+}

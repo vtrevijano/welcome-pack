@@ -1,0 +1,15 @@
+.home{
+    &__synopsis{
+        text-align: center;
+                font-size: 1.2rem;
+                margin: 20px auto 40px auto;
+                line-height: 2.25;
+    }
+    &__image{
+    display: block;
+    width: 100%;
+    margin: 0  auto;
+    max-width: 500px;
+    border-radius: 5px;
+    }
+}

@@ -1,0 +1,33 @@
+$mainColor: #35b13c;
+$yellow: #b2c455;
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  text-align: center;
+
+  &__element {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 90%;
+    max-width: 400px;
+    border: 2px solid $mainColor;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    padding: 0 20px 20px;
+    background-image: url("https://media.giphy.com/media/DTh1K6VuivY0gEuzWy/giphy.gif");
+    background-size: cover;
+  }
+  &__label {
+    margin: 10px auto;
+    color: $yellow;
+  }
+  &__info {
+    margin: 10px auto;
+    color: $mainColor;
+  }
+}

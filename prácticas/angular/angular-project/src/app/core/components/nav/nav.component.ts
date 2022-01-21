@@ -8,9 +8,9 @@ import { MenuItem } from './models/menu-item';
 })
 export class NavComponent implements OnInit {
   public menuItem: MenuItem[] = [
-    {label: 'home', url: '/'},
-    {label: 'list', url: '/list'},
-    {label: 'about', url: '/about'},
+    {label: 'HOME', url: '/'},
+    {label: 'LIST', url: '/list'},
+    {label: 'ABOUT', url: '/about'},
   ]
 
   constructor() { }

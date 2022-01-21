@@ -1,5 +1,15 @@
-<li *ngFor="let item of menuItem">
-    <a [routerLink]="[item.url]">
-        {{item.label}}
-    </a>
-</li>
+<div class="nav">
+  <a routerLink="/home">
+    <img
+      class="nav__image"
+      src="https://playbyplaytoys.es/wp-content/uploads/2021/01/rickymorty_bleed.png"
+    />
+  </a>
+  <ul class="nav__list">
+    <li *ngFor="let item of menuItem">
+      <a [routerLink]="[item.url]">
+        {{ item.label }}
+      </a>
+    </li>
+  </ul>
+</div>

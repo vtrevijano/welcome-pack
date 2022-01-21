@@ -1,0 +1,40 @@
+$mainColor: #35b13c;
+$yellow: #b2c455;
+
+.home{
+    &__title{
+        text-align: center;
+        font-size: 2rem;
+        margin: 20px auto 40px auto;
+    }
+    &__introduction{
+        text-align: center;
+        font-size: 24px;
+        margin: 20px auto 40px auto;
+    }
+    &__warning{
+            margin: 10px auto;
+            color: $yellow;
+            text-align: center;
+            font-size: 1.65rem;
+    }
+    &__synopsis{
+        text-align: center;
+                font-size: 1.2rem;
+                margin: 20px auto 40px auto;
+                line-height: 2.25;
+    }
+    &__image{
+        display: block;
+    width: 100%;
+    margin: 0  auto;
+    max-width: 500px;
+    border-radius: 5px;
+    }
+    &__iframe{
+        display: block;
+        max-width: 600px;
+        border-radius: 10px;
+        margin: 0 auto;
+    }
+}

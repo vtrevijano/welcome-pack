@@ -11,6 +11,10 @@ const routes: Routes = [
       import('./pages/list/list.module').then(m => m.ListModule)
   },
   {
+    path: `list-detail/:id`, loadChildren: () =>
+      import('./pages/list-detail/list-detail.module').then(m => m.ListDetailModule)
+  },
+  {
     path: `about`, loadChildren: () =>
       import('./pages/about/about.module').then(m => m.AboutModule)
   },

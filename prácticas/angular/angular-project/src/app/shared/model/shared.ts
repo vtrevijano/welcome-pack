@@ -1,15 +1,27 @@
 export interface Character {
     id: number;
     name: string;
-    image: string;
-    status: string;
+    image: Image;
 }
-export interface CharacterInfo {
-    info: {
-        count: number;
-        next: string;
-        pages: number;
-        prev: string;
+
+export interface Image {
+    src: string;
+    alt: string;
+}
+
+export interface Biography{
+        name: string;
+        status: string;
+        species: string;
+        gender: string;
+    
+}
+
+export interface Places {
+    origin: {
+        name: string;
     }
-    results: Character[];
+    location: {
+        name: string;
+    }
 }

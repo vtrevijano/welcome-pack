@@ -1,0 +1,33 @@
+$mainColor: #35b13c;
+$yellow: #b2c455;
+
+.nav{
+    a{
+        text-decoration: none;
+        color: $yellow;
+        font-size: 1.7rem;
+    }
+    &__image{
+        display: block;
+        width: 100%;
+        margin: 0  auto;
+        max-width: 500px;
+        padding-bottom: 70px;
+    }
+    &__list{
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        li{
+            display: flex;
+            justify-content: space-evenly;
+            list-style-type: none;
+            width: 90%;
+            max-width: 550px;
+            border-radius: 5px;
+            margin: 0 auto 30px auto;
+            margin-bottom: 30px;
+            padding: 15px;
+        }
+    }
+}
