@@ -18,6 +18,14 @@ const routes: Routes = [
     path: `about`, loadChildren: () =>
       import('./pages/about/about.module').then(m => m.AboutModule)
   },
+  {
+    path: `form`, loadChildren: () =>
+      import('./pages/form/form.module').then(m => m.FormModule)
+  },
+  {
+    path: `my-posts`, loadChildren: () =>
+      import('./pages/my-posts/my-posts.module').then(m => m.MyPostsModule)
+  },
   { path: ``, redirectTo: `home`, pathMatch: `full` }
 ];
 

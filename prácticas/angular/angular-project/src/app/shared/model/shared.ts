@@ -25,3 +25,9 @@ export interface Places {
         name: string;
     }
 }
+
+export interface Form {
+    id: number,
+    title: string,
+    author: string,
+}

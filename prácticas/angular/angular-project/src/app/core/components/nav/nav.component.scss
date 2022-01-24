@@ -18,8 +18,10 @@ $yellow: #b2c455;
         margin: 0 auto;
         padding: 0;
         display: flex;
+        
         li{
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-evenly;
             list-style-type: none;
             width: 90%;

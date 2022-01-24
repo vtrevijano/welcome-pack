@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { CharacterListService } from './services/character-list.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ApiService } from './services/api.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CoreModule,
     HttpClientModule
   ],
-  providers: [CharacterListService],
+  providers: [CharacterListService, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,44 @@
+<h2>Formulario para actualizar la BBDD:</h2>
+<form novalidate (ngSubmit)="onSubmit()" [formGroup]="userRegisterForm">
+  <fieldset>
+    <label for="id">ID:</label>
+    <input type="text" id="id" formControlName="id" />
+    <div
+      *ngIf="
+        !userRegisterForm.get('id')?.valid &&
+        (userRegisterForm.get('id')?.dirty || submitted)
+      "
+    >
+      Has introducido mal tu id
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <label for="title">title:</label>
+    <input type="text" id="title" formControlName="title" />
+    <div
+      *ngIf="
+        !userRegisterForm.get('title')?.valid &&
+        (userRegisterForm.get('title')?.dirty || submitted)
+      "
+    >
+      Has introducido mal tu título
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <label for="author">Author:</label>
+    <input type="text" id="author" formControlName="author" />
+    <div
+      *ngIf="
+        !userRegisterForm.get('author')?.valid &&
+        (userRegisterForm.get('author')?.dirty || submitted)
+      "
+    >
+      el autor no existe
+    </div>
+  </fieldset>
+  <button type="submit" [disabled]="!userRegisterForm?.valid">
+    Actualizar base de datos
+  </button>
+</form>

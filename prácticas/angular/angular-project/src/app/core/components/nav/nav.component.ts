@@ -11,6 +11,8 @@ export class NavComponent implements OnInit {
     {label: 'HOME', url: '/'},
     {label: 'LIST', url: '/list'},
     {label: 'ABOUT', url: '/about'},
+    {label: 'FORM', url: '/form'},
+    {label: 'MYPOSTS', url: '/my-posts'},
   ]
 
   constructor() { }

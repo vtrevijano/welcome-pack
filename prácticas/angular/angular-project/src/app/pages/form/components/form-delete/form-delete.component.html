@@ -1,0 +1,20 @@
+<h2>Formulario para eliminar elementos de la BBDD:</h2>
+<form novalidate (ngSubmit)="onSubmit()" [formGroup]="userRegisterForm">
+  <fieldset>
+    <label for="id">ID:</label>
+    <input type="text" id="id" formControlName="id" />
+    <div
+      *ngIf="
+        !userRegisterForm.get('id')?.valid &&
+        (userRegisterForm.get('id')?.dirty || submitted)
+      "
+    >
+No existe el id
+    </div>
+  </fieldset>
+
+
+  <button type="submit" [disabled]="!userRegisterForm?.valid">
+    Borrar elemento de la base de datos
+  </button>
+</form>

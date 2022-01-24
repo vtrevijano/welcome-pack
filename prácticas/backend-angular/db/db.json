@@ -1,0 +1,19 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Un nuevo comienzo",
+      "author": "J.R.R Tolkien"
+    },
+    {
+      "id": "2",
+      "title": "La Comunidad del Anillo",
+      "author": "J.R.R Tolkien"
+    },
+    {
+      "id": "3",
+      "title": "Las dos torres",
+      "author": "J.R.R Tolkien"
+    }
+  ]
+}
