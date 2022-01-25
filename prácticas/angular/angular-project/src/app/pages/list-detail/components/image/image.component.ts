@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core'
-import { ActivatedRoute } from '@angular/router'
-import { CharacterListService } from 'src/app/services/character-list.service'
+import { Component, Input, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-image',
@@ -8,17 +6,11 @@ import { CharacterListService } from 'src/app/services/character-list.service'
   styleUrls: ['./image.component.scss']
 })
 export class ImageComponent implements OnInit {
-  public recoveredId!: any
-  public biography!: any
+  @Input() biography: any
+  public info!: any;
   constructor (
-    private activatedRoute: ActivatedRoute,
-    private http: CharacterListService
   ) {}
 
   ngOnInit (): void {
-    this.recoveredId = this.activatedRoute.snapshot.paramMap.get('id')
-    this.http.getCharactersId(this.recoveredId).subscribe(finalResult => {
-      this.biography = finalResult
-    })
   }
 }

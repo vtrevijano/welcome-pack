@@ -1,6 +1,15 @@
 $mainColor: #35b13c;
 $yellow: #b2c455;
 
+/* MIXINS */
+
+@mixin for-tablet {
+    @media (min-width: 576px) { @content; }
+  }
+  @mixin for-big-desktop {
+    @media (min-width: 992px) { @content; }
+  }
+
 .nav{
     a{
         text-decoration: none;
@@ -18,7 +27,10 @@ $yellow: #b2c455;
         margin: 0 auto;
         padding: 0;
         display: flex;
-        
+        flex-direction: column;
+        @include for-tablet {    
+                flex-direction: row;
+             }
         li{
             display: flex;
             flex-wrap: wrap;

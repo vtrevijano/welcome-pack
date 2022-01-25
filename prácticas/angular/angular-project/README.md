@@ -1,27 +1,18 @@
 # AngularProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
+Para este proyecto de angular será necesario, en primer lugar, tener levantado el server. Este server se encuentra en la carpeta BACKEND-ANGULAR. Para arrancarlo, ejecutar en la terminal de vscode: npm run server. Se levantará en el puerto 3000.
 
-## Development server
+Con el servidor levantado, podremos hacer un ng serve en este mismo proyecto. Se levantará en el puerto 4200.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+El proyecto cuenta con todo lo solicitado en la iteration 1 y 2, a excepción de los bonus (test unitarios y traducción) por falta de tiempo.
 
-## Code scaffolding
+Las apis usadas han sido: rick and morty, fake api creada con json server y la api de github.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Durante el proyecto me han surgido una serie de dudas que no he conseguido resolver:
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- cómo mejorar el tipado. En el list details, no sé cómo recuperar únicamente las propiedades de la interfaz para no tener que usar any.
+- el archivo de la carpeta styles de colors no he logrado que lo identifique de ninguna forma
+- Problemas inicialización de variables por la versión de typescript???
+- Duda de BEM: ejemplo src/app/pages/form/components/form-create/form-create.html líneas 3-6. lo que está dentro del fieldset cómo se pondría con &__
+- cómo hacer para no repetir código en el scss. Por ejemplo, si un elemento padre tiene 3 hijos, cómo hacer para no tener que repetir los estilos en los hijos cuando tienen algunas clases iguales.
+- Breakpoints para mediaqueries.

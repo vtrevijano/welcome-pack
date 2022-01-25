@@ -2,7 +2,7 @@
   <ul class="container">
     <li class="container__element">
       <h2 class="container__name">{{ biography.name }}</h2>
-      <app-image></app-image>
+      <app-image [biography]="biography"></app-image>
       <h5 class="container__label">
         Status:<span class="container__info"> {{ biography.status }}</span>
       </h5>
@@ -12,7 +12,7 @@
       <h5 class="container__label">
         Género:<span class="container__info"> {{ biography.gender }}</span>
       </h5>
-      <app-places></app-places>
+      <app-places [biography]="biography"></app-places>
     </li>
   </ul>
 </div>

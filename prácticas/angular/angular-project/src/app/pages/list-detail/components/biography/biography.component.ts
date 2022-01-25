@@ -1,8 +1,4 @@
-import { HttpClient } from '@angular/common/http'
-import { Component, OnInit } from '@angular/core'
-import { ActivatedRoute } from '@angular/router'
-import { CharacterListService } from 'src/app/services/character-list.service'
-import { Biography } from 'src/app/shared/model/shared'
+import { Component, Input, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-biography',
@@ -11,17 +7,11 @@ import { Biography } from 'src/app/shared/model/shared'
 })
 export class BiographyComponent implements OnInit {
   public recoveredId?: string | null
-  public biography!: any
+  @Input() biography!: any
   constructor (
-    private activatedRoute: ActivatedRoute,
-    private http: CharacterListService
   ) {}
 
   ngOnInit (): void {
-    this.recoveredId = this.activatedRoute.snapshot.paramMap.get('id')
-    this.http.getCharactersId(this.recoveredId).subscribe(finalResult => {
-      this.biography = finalResult
-      console.log(this.biography)
-    })
+
   }
 }

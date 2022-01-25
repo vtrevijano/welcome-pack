@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
+import { CharacterListService } from 'src/app/services/character-list.service'
 
 @Component({
   selector: 'app-list-detail',
@@ -7,13 +8,16 @@ import { ActivatedRoute } from '@angular/router'
   styleUrls: ['./list-detail.component.scss']
 })
 export class ListDetailComponent implements OnInit {
-  public characterId?: string | null
-
-  constructor (private route: ActivatedRoute) {}
+  public recoveredId!: any
+  public biography!: any
+  constructor (private activatedRoute: ActivatedRoute,
+    private http: CharacterListService) {}
 
   ngOnInit (): void {
-    this.route.paramMap.subscribe(params => {
-      this.characterId = params.get('id')
+    this.recoveredId = this.activatedRoute.snapshot.paramMap.get('id')
+    this.http.getCharactersId(this.recoveredId).subscribe(finalResult => {
+      this.biography = finalResult
+      console.log(this.biography)
     })
   }
 }

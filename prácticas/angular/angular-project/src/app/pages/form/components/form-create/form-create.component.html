@@ -1,8 +1,8 @@
-<h2>Formulario para crear un nuevo elemento en la base de datos:</h2>
-<form novalidate (ngSubmit)="onSubmit()" [formGroup]="userRegisterForm">
-  <fieldset>
-    <label for="id">ID:</label>
-    <input type="text" id="id" formControlName="id" />
+<h2 class="title"> Formulario para crear un nuevo elemento en la base de datos:</h2>
+<form class="form" novalidate (ngSubmit)="onSubmit()" [formGroup]="userRegisterForm">
+  <fieldset class="form__fieldset">
+    <label class="form__label" for="id">ID:</label>
+    <input class="form__input" type="text" id="id" formControlName="id" />
     <div
       *ngIf="
         !userRegisterForm.get('id')?.valid &&
@@ -13,9 +13,9 @@
     </div>
   </fieldset>
 
-  <fieldset>
-    <label for="title">title:</label>
-    <input type="text" id="title" formControlName="title" />
+  <fieldset class="form__fieldset">
+    <label class="form__label" for="title">title:</label>
+    <input class="form__input" type="text" id="title" formControlName="title" />
     <div
       *ngIf="
         !userRegisterForm.get('title')?.valid &&
@@ -26,9 +26,9 @@
     </div>
   </fieldset>
 
-  <fieldset>
-    <label for="author">Author:</label>
-    <input type="text" id="author" formControlName="author" />
+  <fieldset class="form__fieldset">
+    <label class="form__label" for="author">Author:</label>
+    <input class="form__input" type="text" id="author" formControlName="author" />
     <div
       *ngIf="
         !userRegisterForm.get('author')?.valid &&
@@ -38,7 +38,7 @@
       el autor no existe
     </div>
   </fieldset>
-  <button type="submit" [disabled]="!userRegisterForm?.valid">
+  <button class="form__button" type="submit" [disabled]="!userRegisterForm?.valid">
     Añadir a la base de datos
   </button>
 </form>
