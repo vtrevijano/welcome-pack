@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/services/api.service';
+import { Component, OnInit } from '@angular/core'
+import { ApiService } from 'src/app/services/api.service'
 
 @Component({
   selector: 'app-my-posts',
@@ -7,17 +7,13 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./my-posts.component.scss']
 })
 export class MyPostsComponent implements OnInit {
-  public posts: any;
-  constructor(private request: ApiService) { }
+  public posts: any
+  constructor (private request: ApiService) {}
 
-  ngOnInit(): void {
+  ngOnInit (): void {
+    this.request.getAllPosts().subscribe(results => {
+      this.posts = results
+      console.log(this.posts)
+    })
   }
-  getAllPosts = () => {
-    this.request.getAllPosts().subscribe((results) => {
-      this.posts = results;
-      console.log(this.posts);
-    });
-    
-  };
- 
 }

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core'
+import { ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-list-detail',
@@ -7,15 +7,13 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./list-detail.component.scss']
 })
 export class ListDetailComponent implements OnInit {
+  public characterId?: string | null
 
-public characterId?: string | null;
+  constructor (private route: ActivatedRoute) {}
 
-  constructor(private route: ActivatedRoute) { }
-
-  ngOnInit(): void {
+  ngOnInit (): void {
     this.route.paramMap.subscribe(params => {
-      this.characterId = params.get('id');
-    });
+      this.characterId = params.get('id')
+    })
   }
-
 }

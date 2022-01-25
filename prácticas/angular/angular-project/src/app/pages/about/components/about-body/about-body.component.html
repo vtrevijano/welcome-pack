@@ -1,48 +1,86 @@
-<p class="introduction">El creador ha sido algo enigmático, no ha aportado datos personales con los que podamos saber su identidad, pero ha dejado una serie de pistas en forma de peticiones a la API de github, por lo que vamos a ver si podemos descubrir quién ha hecho esta app</p>
+<p class="introduction">
+  El creador ha sido algo enigmático, no ha aportado datos personales con los
+  que podamos saber su identidad, pero ha dejado una serie de pistas en forma de
+  peticiones a la API de github, por lo que vamos a ver si podemos descubrir
+  quién ha hecho esta app
+</p>
 <div class="creator">
-    <h3 class="creator__title">Los datos que tenemos</h3>
-    <ul class="creator__list">
-        <li class="creator__item">
-            <h4 class="creator__label">
-                Alias:<span  class="creator__info"> {{ srcList.vtrevijano.login }}</span>
-            </h4>
-            <h4 class="creator__label">
-                ID de usuario:<span  class="creator__info"> {{ srcList.vtrevijano.id }}</span>
-            </h4>
-            <img [src]="srcList.vtrevijano.avatar_url" [alt]="srcList.vtrevijano.login" class="creator__image">
-            <h4 class="creator__label">
-                Repositorios públicos:<span  class="creator__info"> {{ srcList.vtrevijano.public_repos }}</span>
-            </h4>
-            <h4 class="creator__label">
-                Followers:<span  class="creator__info"> {{ srcList.vtrevijano.followers }}</span>
-            </h4>
-            <h4 class="creator__label">
-                Following:<span  class="creator__info"> {{ srcList.vtrevijano.following }}</span>
-            </h4>
-            <h4 class="creator__label">
-                Fecha de creación:<span  class="creator__info"> {{ srcList.vtrevijano.created_at }}</span>
-            </h4>
-        </li>
-    </ul>
+  <h3 class="creator__title">Los datos que tenemos</h3>
+  <ul class="creator__list">
+    <li class="creator__item">
+      <h4 class="creator__label">
+        Alias:<span class="creator__info"> {{ srcList.vtrevijano.login }}</span>
+      </h4>
+      <h4 class="creator__label">
+        ID de usuario:<span class="creator__info">
+          {{ srcList.vtrevijano.id }}</span
+        >
+      </h4>
+      <img
+        [src]="srcList.vtrevijano.avatar_url"
+        [alt]="srcList.vtrevijano.login"
+        class="creator__image"
+      />
+      <h4 class="creator__label">
+        Repositorios públicos:<span class="creator__info">
+          {{ srcList.vtrevijano.public_repos }}</span
+        >
+      </h4>
+      <h4 class="creator__label">
+        Followers:<span class="creator__info">
+          {{ srcList.vtrevijano.followers }}</span
+        >
+      </h4>
+      <h4 class="creator__label">
+        Following:<span class="creator__info">
+          {{ srcList.vtrevijano.following }}</span
+        >
+      </h4>
+      <h4 class="creator__label">
+        Fecha de creación:<span class="creator__info">
+          {{ srcList.vtrevijano.created_at }}</span
+        >
+      </h4>
+    </li>
+  </ul>
 </div>
-<p class="introduction">Con todos estos datos podríamos hacernos a la idea de algunos datos... por ejemplo, su cuenta fue creada el 12 de enero de 2022, por lo que es una cuenta reciente. Además, no tiene ni seguidores ni sigue a nignuna cuenta de otro usuario/organización. Su alias es vtrevijano, por lo que podríamos pensar que es un apellido... por último, el único repositorio público existente en su cuenta es este mismo... espera!! eso quiere decir que...¿yo soy el creador?</p>
+<p class="introduction">
+  Con todos estos datos podríamos hacernos a la idea de algunos datos... por
+  ejemplo, su cuenta fue creada el 12 de enero de 2022, por lo que es una cuenta
+  reciente. Además, no tiene ni seguidores ni sigue a nignuna cuenta de otro
+  usuario/organización. Su alias es vtrevijano, por lo que podríamos pensar que
+  es un apellido... por último, el único repositorio público existente en su
+  cuenta es este mismo... espera!! eso quiere decir que...¿yo soy el creador?
+</p>
 <div class="aboutFooter">
-    <h2 class="aboutFooter__title">Agradecimientos especiales:</h2>
-    <ul class="aboutFooter__list">
-        <li class="aboutFooter__item">
-            <a [href]="srcList.minsait.url">{{srcList.minsait.login}}</a>
-            <h3 class="aboutFooter__info">Id: {{srcList.minsait.id}}</h3>
-            <img [src]="srcList.minsait.avatar_url" [alt]="srcList.minsait.login" class="aboutFooter__image">
-        </li>
-        <li class="aboutFooter__item">
-            <a [href]="srcList.vtrevijano.url">{{srcList.vtrevijano.login}}</a>
-            <h3 class="aboutFooter__info">Id: {{srcList.vtrevijano.id}}</h3>
-            <img [src]="srcList.vtrevijano.avatar_url" [alt]="srcList.vtrevijano.login" class="aboutFooter__image">
-        </li>
-        <li class="aboutFooter__item">
-            <a [href]="srcList.characters.url">{{srcList.characters.name}}</a>
-            <h3 class="aboutFooter__info"> Id:{{srcList.characters.id}}</h3>
-            <img [src]="srcList.characters.image" [alt]="srcList.characters.name" class="aboutFooter__image">
-        </li>
-    </ul>
+  <h2 class="aboutFooter__title">Agradecimientos especiales:</h2>
+  <ul class="aboutFooter__list">
+    <li class="aboutFooter__item">
+      <a [href]="srcList.minsait.url">{{srcList.minsait.login}}</a>
+      <h3 class="aboutFooter__info">Id: {{srcList.minsait.id}}</h3>
+      <img
+        [src]="srcList.minsait.avatar_url"
+        [alt]="srcList.minsait.login"
+        class="aboutFooter__image"
+      />
+    </li>
+    <li class="aboutFooter__item">
+      <a [href]="srcList.vtrevijano.url">{{srcList.vtrevijano.login}}</a>
+      <h3 class="aboutFooter__info">Id: {{srcList.vtrevijano.id}}</h3>
+      <img
+        [src]="srcList.vtrevijano.avatar_url"
+        [alt]="srcList.vtrevijano.login"
+        class="aboutFooter__image"
+      />
+    </li>
+    <li class="aboutFooter__item">
+      <a [href]="srcList.characters.url">{{srcList.characters.name}}</a>
+      <h3 class="aboutFooter__info">Id:{{srcList.characters.id}}</h3>
+      <img
+        [src]="srcList.characters.image"
+        [alt]="srcList.characters.name"
+        class="aboutFooter__image"
+      />
+    </li>
+  </ul>
 </div>

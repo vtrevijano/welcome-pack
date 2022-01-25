@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { PriorityNamePipe } from './filter-names.pipe';
+import { PaginationPipe } from './pagination.pipe';
 
 @NgModule({
   imports: [],
   declarations: [
-    PriorityNamePipe
+    PriorityNamePipe,
+    PaginationPipe
   ],
-  exports: [PriorityNamePipe]
+  exports: [PriorityNamePipe, PaginationPipe]
 })
 export class AppPipesModule { }

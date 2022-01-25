@@ -2,13 +2,22 @@
   <h3 class="gallery__title">Rick and Morty Character List!</h3>
   <!-- <button (click)="nextPage()">Next</button>
     <button (click)="previousPage()">Previous</button> -->
-  <h3 class="gallery__filterTitle">Para filtrar los personajes por nombre ⬇️</h3>
+  <h3 class="gallery__filterTitle">
+    Para filtrar los personajes por nombre ⬇️
+  </h3>
   <input class="gallery__filterInput" type="text" [(ngModel)]="filter" />
   <div>
     <ul class="characterList">
-      <li [routerLink]="['/list-detail/' + character.id]" *ngFor="let character of characterList | filterNames: filter">
+      <li
+        [routerLink]="['/list-detail/' + character.id]"
+        *ngFor="let character of characterList | filterNames: filter |pagination: length"
+      >
         <h4 class="characterList__name">{{ character.name }}</h4>
-        <img class="characterList__image" [src]="character.image" [alt]="character.name" />
+        <img
+          class="characterList__image"
+          [src]="character.image"
+          [alt]="character.name"
+        />
       </li>
     </ul>
   </div>
