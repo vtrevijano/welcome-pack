@@ -2,7 +2,7 @@
   "posts": [
     {
       "id": "1",
-      "title": "Un nuevo comienzo",
+      "title": "Un Viaje Inesperado",
       "author": "J.R.R Tolkien"
     },
     {
@@ -14,6 +14,61 @@
       "id": "3",
       "title": "Las dos torres",
       "author": "J.R.R Tolkien"
+    },
+    {
+      "id": "4",
+      "title": "El Retorno del Rey",
+      "author": "J.R.R Tolkien"
+    },
+    {
+      "id": "5",
+      "title": "La Desolación de Smaug",
+      "author": "J.R.R Tolkien"
+    },
+    {
+      "id": "6",
+      "title": "La Batalla de los 5 Ejércitos",
+      "author": "J.R.R Tolkien"
+    },
+    {
+      "id": "7",
+      "title": "Harry Potter y la Piedra Filosofal",
+      "author": "J.K Rowling"
+    },
+    {
+      "id": "8",
+      "title": "Harry Potter y la Cámara Secreta",
+      "author": "J.K Rowling"
+    },
+    {
+      "id": "9",
+      "title": "Harry Potter y el Prisionero de Azkaban",
+      "author": "J.K Rowling"
+    },
+    {
+      "id": "10",
+      "title": "Harry Potter y el Cáliz de Fuego",
+      "author": "J.K Rowling"
+    },
+    {
+      "id": "11",
+      "title": "Harry Potter y La Orden del Fénix",
+      "author": "J.K Rowling"
+    },
+    {
+      "id": "12",
+      "title": "Harry Potter y el Príncipe Mestizo",
+      "author": "J.K Rowling"
+    },
+    {
+      "id": "13",
+      "title": "Harry Potter: Las Reliquias de la muerte: I",
+      "author": "J.K Rowling"
+    },
+    {
+      "id": "14",
+      "title": "Harry Potter: Las Reliquias de la Muerte: II",
+      "author": "J.K Rowling"
     }
   ]
 }
