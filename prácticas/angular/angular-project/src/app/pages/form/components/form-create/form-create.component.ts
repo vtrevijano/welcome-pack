@@ -9,7 +9,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms'
   styleUrls: ['./form-create.component.scss']
 })
 export class FormCreateComponent implements OnInit {
-  public posts: any
+  public posts?: Object
   public newPost: Form = {
     id: 0,
     title: '',
@@ -26,10 +26,9 @@ export class FormCreateComponent implements OnInit {
   }
 
   ngOnInit (): void {}
-  createPost = () => {
+  private createPost ():void {
     this.request.createPost(this.newPost).subscribe(results => {
       this.posts = results
-      console.log(this.posts)
     })
   }
   public onSubmit (): void {
@@ -42,8 +41,6 @@ export class FormCreateComponent implements OnInit {
       }
       this.newPost = user
       this.createPost()
-      console.log(user)
-      console.log(this.newPost)
       this.userRegisterForm.reset()
       this.submitted = false
     }

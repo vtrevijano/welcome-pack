@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core'
-import { Character } from '../shared/model/shared'
+import { Observable } from 'rxjs'
+import { Biography, Character, TotalCharacters } from '../shared/model/shared'
 
 const baseUrl = 'https://rickandmortyapi.com/api/character/'
 const characterUrl = baseUrl + '?page='
@@ -13,11 +14,11 @@ export class CharacterListService {
   public characterList: Character[] = []
   constructor (private http: HttpClient) {}
 
-  getCharacters () {
-    return this.http.get(characterUrl)
+  getCharacters ():Observable<TotalCharacters> {
+    return this.http.get(characterUrl) as Observable<TotalCharacters>
   }
-  getCharactersId (id: any) {
-    return this.http.get(baseUrl + id)
+  getCharactersId (id: string):Observable<Biography> {
+    return this.http.get(baseUrl + id) as Observable<Biography>;
   }
 
   nextPage () {

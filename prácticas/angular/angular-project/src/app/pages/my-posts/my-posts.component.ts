@@ -7,13 +7,12 @@ import { ApiService } from 'src/app/services/api.service'
   styleUrls: ['./my-posts.component.scss']
 })
 export class MyPostsComponent implements OnInit {
-  public posts: any
+  public posts?: any
   constructor (private request: ApiService) {}
 
   ngOnInit (): void {
     this.request.getAllPosts().subscribe(results => {
       this.posts = results
-      console.log(this.posts)
     })
   }
 }

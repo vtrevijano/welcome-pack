@@ -9,11 +9,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms'
   styleUrls: ['./form-update.component.scss']
 })
 export class FormUpdateComponent implements OnInit {
-  // Incialización del formulario
   public userRegisterForm!: FormGroup
-  // variable submitted a false
   public submitted: boolean = false
-  public posts: any
+  public posts?: Object
   public updatePosts: Form = {
     id: 0,
     title: '',
