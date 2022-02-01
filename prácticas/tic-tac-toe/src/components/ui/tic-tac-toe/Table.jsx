@@ -9,12 +9,31 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #22333b;
+  background-color: #243d7c;
 `;
 const Row = styled.div`
   width: 100%;
+  justify-content: center;
   display: flex;
 `;
+
+const Title = styled.h1`
+  color: whitesmoke;
+  font-size: 2.3rem;
+  text-align: center;
+`;
+
+const Button = styled.button`
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #de533c;
+  color: whitesmoke;
+  font-size: 1.8rem;
+  cursor: pointer;
+  :hover{
+    opacity: 0.8;
+  }
+`
 
 const Table = () => {
   //se crean los estados iniciales
@@ -28,7 +47,6 @@ const Table = () => {
 
   const handleClick = (i) => {
     const squaresSliced = squaresState.slice();
-    console.log(squaresSliced);
     if (calculateWinner(squaresSliced) || squaresSliced[i]) {
       return;
     }
@@ -37,7 +55,7 @@ const Table = () => {
     setTurnX(!turnX);
   };
 
-//Función para terminar/empezar partida nueva. Lo que hace es reestablecer los valores por defecto de los estados.
+  //Función para terminar/empezar partida nueva. Lo que hace es reestablecer los valores por defecto de los estados.
 
   const handleFinishClick = () => {
     setSquare([Array(9).fill(null)]);
@@ -57,38 +75,39 @@ const Table = () => {
 
   return (
     <>
-      <div>
-        {isStarted ? (
-          <button onClick={handleFinishClick}>Empezar</button>
-        ) : (
-          <>
-            <button onClick={handleFinishClick}>Terminar juego</button>
-            <Container>
-              {winner ? (
-                <h1>Ha ganado el jugador {winner}</h1>
-              ) : (
-                <h1>Turno del jugador {turnX ? "X" : "O"}</h1>
-              )}
-            </Container>
-            <Row>
-              {paintSquares(1)}
-              {paintSquares(2)}
-              {paintSquares(3)}
-            </Row>
-            <Row>
-              {paintSquares(4)}
-              {paintSquares(5)}
-              {paintSquares(6)}
-            </Row>
-            <Row>
-              {paintSquares(7)}
-              {paintSquares(8)}
-              {paintSquares(9)}
-            </Row>
-          </>
-        )}
-      </div>
-    </>
+        <Container>
+          {isStarted ? (
+            <Button onClick={handleFinishClick}>Empezar</Button>
+          ) : (
+            <>
+            <Button onClick={handleFinishClick}>Terminar juego</Button>
+            {winner ? (
+              <Title>Ha ganado el jugador {winner}</Title>
+            ) : (
+              <>
+                <Title>Turno del jugador {turnX ? "X" : "O"}</Title>
+                <Row>
+                  {paintSquares(1)}
+                  {paintSquares(2)}
+                  {paintSquares(3)}
+                </Row>
+                <Row>
+                  {paintSquares(4)}
+                  {paintSquares(5)}
+                  {paintSquares(6)}
+                </Row>
+                <Row>
+                  {paintSquares(7)}
+                  {paintSquares(8)}
+                  {paintSquares(9)}
+                </Row>
+              </>
+            )}
+            </>
+          )}
+         
+        </Container>
+      </>
   );
 };
 

@@ -1,7 +1,12 @@
 import React from 'react';
+import Hangman from '../components/ui/hangman/components/Hangman';
 
 const hangman = () => {
-  return <div>hangman</div>;
+  return (
+    <>
+    <Hangman/>
+    </>
+  );
 };
 
 export default hangman;

@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { Link, Routes, Route, HashRouter } from "react-router-dom";
-import Tictactoe from "../pages/Tictactoe"
-import Hangman from "../pages/Hangman"
-import Sudoku from "../pages/Sudoku"
-import Home from "../pages/Home"
+import Tictactoe from "../../pages/Tictactoe"
+import Hangman from "../../pages/Hangman"
+import Sudoku from "../../pages/Sudoku"
+import Home from "../../pages/Home"
 
 const desktopStartWidth = 660;
 const mobile = `@media (max-width: ${desktopStartWidth}px)`;
