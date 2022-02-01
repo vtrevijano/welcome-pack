@@ -11,7 +11,7 @@ const SquareButton = styled.button`
     clip-path: polygon(36% 0, 0 0, 0 29%, 0 57%, 0 100%, 30% 100%, 73% 100%, 100% 100%, 100% 59%, 100% 31%, 100% 0, 74% 0);
 `
 
-const Values = styled.h2`
+const SquareValues = styled.h2`
     color: #472980;
     font-size: 2rem;
 `
@@ -21,7 +21,7 @@ const Squares = ({value, onClick}) => {
   return(
       <>
       <SquareButton onClick={onClick}>
-          <Values>{value}</Values>
+          <SquareValues>{value}</SquareValues>
       </SquareButton>
       </>
   )

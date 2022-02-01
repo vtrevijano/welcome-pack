@@ -34,5 +34,4 @@ const IncorrectLetters = ({ incorrectLetters }) => {
     </Container>
   );
 };
-//daniel quintero nuñez
 export default IncorrectLetters;

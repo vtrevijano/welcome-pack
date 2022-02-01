@@ -79,24 +79,24 @@ const Navigation = () => {
     <Nav>
       <Navul>
         <Navli>
-          <Link style={{ "text-decoration": "none" }} to="/">
+          <Link style={{ "textDecoration": "none" }} to="/">
             <NavItem>Home</NavItem>
           </Link>
         </Navli>
        
         <Navli>
-          <Link style={{ "text-decoration": "none" }} to="/tictactoe">
+          <Link style={{ "textDecoration": "none" }} to="/tictactoe">
             <NavItem>TIC TAC TOE</NavItem>
           </Link>
         </Navli>
         
         <Navli>
-          <Link style={{ "text-decoration": "none" }} to="/hangman">
+          <Link style={{ "textDecoration": "none" }} to="/hangman">
             <NavItem>HANGMAN</NavItem>
           </Link>
         </Navli>
         <Navli>
-          <Link style={{ "text-decoration": "none" }} to="/sudoku">
+          <Link style={{ "textDecoration": "none" }} to="/sudoku">
             <NavItem>Sudoku</NavItem>
           </Link>
         </Navli>

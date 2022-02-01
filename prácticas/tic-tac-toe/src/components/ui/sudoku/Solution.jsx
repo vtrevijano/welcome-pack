@@ -36,9 +36,9 @@ const Solution = ({ showSolution, solution }) => {
   let listItems = [];
 
   if (showSolution === true) {
-    listItems = solution.map((number) => (
-      <Li>
-        <H2>{number}</H2>
+    listItems = solution.map((number, i) => (
+      <Li key={i}>
+        <H2 >{number}</H2>
       </Li>
     ));
   }

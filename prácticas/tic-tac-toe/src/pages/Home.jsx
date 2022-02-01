@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+const desktopStartWidth = 768;
+const mobile = `@media (max-width: ${desktopStartWidth}px)`;
+
+
 const H1 = styled.h1`
   color: whitesmoke;
   font-size: 1.7rem;
@@ -24,6 +28,10 @@ const Ul = styled.ul`
   display: flex;
   justify-content: space-around;
   list-style-type: none;
+  ${mobile} {
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 const Li = styled.li`

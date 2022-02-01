@@ -155,7 +155,7 @@ const SudokuGame = () => {
   const solvedString = JSON.stringify(solved);
 
   //función que almacena los valores introducidos por el jugador y saca una u otra alerta dependiendo del resultado.
-  const handleClick = () => {
+  const checkResults = () => {
     const input = document.querySelectorAll(".inputValue");
     input.forEach((number) => {
       values.push(number.value);
@@ -199,7 +199,7 @@ const SudokuGame = () => {
   return (
     <>
       <ContainerButtons>
-        <ResumeButton resume={resume} onClick={handleClick}>
+        <ResumeButton resume={resume} onClick={checkResults}>
           Enviar resultados
         </ResumeButton>
 
@@ -212,8 +212,8 @@ const SudokuGame = () => {
       <Board>
         {sudokuBoard.length > 0}
         <Ul>
-          {sudokuBoard.map((number) => (
-            <Li>
+          {sudokuBoard.map((number, i) => (
+            <Li key={i}>
               <Input
                 className="inputValue"
                 type="number"
